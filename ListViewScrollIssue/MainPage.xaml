@@ -27,7 +27,7 @@
             Grid.Row="1"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand"
-            Background="DeepSkyBlue"
+            Background="Black"
             ItemsSource="{Binding TestModel}"
             Margin="0"
             IsGroupingEnabled="True">
