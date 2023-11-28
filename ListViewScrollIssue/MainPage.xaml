@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+    x:Class="ListViewScrollIssue.MainPage"
+    ios:Page.UseSafeArea="True"
+    NavigationPage.IconColor="ForestGreen"
+    x:Name="Page">
+
+    <Grid
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label
+            Text="Repro project to show ListView scrolling issue on iOS"
+            HorizontalTextAlignment="Center"
+            FontSize="Header" />
+        <ListView
+            Grid.Row="1"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Background="GhostWhite"
+            ItemsSource="{Binding TestModel}"
+            Margin="0"
+            IsGroupingEnabled="True">
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate x:DataType="models"
+            </ListView.GroupHeaderTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>
